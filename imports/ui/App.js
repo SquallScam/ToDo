@@ -12,7 +12,7 @@ class App extends Component {
     event.preventDefault();
 
     //Find the test field via the React ref
-    const text = ReactDOM.findDOMNode(this.refs.textinput).nodeValue.trim();
+    const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
 
     Tasks.insert({
       text,
@@ -26,6 +26,7 @@ class App extends Component {
   renderTasks() {
     return this.props.tasks.map((task) => (
       <Task key={task._id} task={task} />
+
     ));
   }
 
@@ -54,6 +55,6 @@ class App extends Component {
 
 export default withTracker(() => {
   return {
-    tasks: Tasks.find({}).fetch(),
+    tasks: Tasks.find({}, { sort: { createdAt: -1 } }).fetch(),
   };
 })(App);
