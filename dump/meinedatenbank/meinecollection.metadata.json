@@ -1,0 +1,1 @@
+{"options":{"capped":true,"size":6142976,"max":10000},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"meinedatenbank.meinecollection"}],"uuid":"86a60c8451414c7791efa07488b85b39"}
