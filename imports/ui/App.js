@@ -71,7 +71,7 @@
           <AccountsUIWrapper />
 
            { this.props.currentUser ?
-            <form calssName="new-task" onSubmit={this.handleSubmit.bind(this)} >
+            <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
               <input
                 type="text"
                 ref="textInput"
